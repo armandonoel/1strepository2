@@ -3,8 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdbool.h>
-
-/*#define ESC       27
+#define ESC       27
 #define SPACE     32
 #define BACKS     8
 #define COMMA     44
@@ -12,7 +11,7 @@
 #define PunDouble 58
 #define PunYComma 59
 #define ENTER     13
-*/
+
 
 char c, nombre[100], corregido[] = "";
 int SelectMenu = 0;
@@ -27,7 +26,7 @@ int imprimir_menu();
 
 errno_t cppy(char *string, char *string1);
 
-void strcat(char corregido[1], char nombre[100]);
+intptr_t strcat2(char corregido[1], char nombre[100]);
 
 void ENCABEZADO()
 {
@@ -88,7 +87,7 @@ void capturar_archivo()
             }else
             {
                 //aqui cada entrada debe ser revisada y corregida para colocar en el archivo fixed.
-                Fc = terminar(Bc,c);
+                Fc = terminar*(Bc, c);
                 //fputc(Fc, FF);
                 Bc = c;
             }
@@ -102,9 +101,9 @@ void capturar_archivo()
     }
 }
 
-void strcat(char corregido[1], char nombre[100]) {
+/*void strcat(char corregido[1], char nombre[100]) {
 
-};
+};*/
 
 void Leer_Archivo(char file[])
 {
